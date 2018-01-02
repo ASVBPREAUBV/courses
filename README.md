@@ -16,3 +16,4 @@ These are the lecture materials from [Practical Deep Learning for Coders](http:/
 6. bash setup_t2.sh 
 7. wait until instance is running
 8. in /setup is a new file called fast-ai-commands.txt
+9. ssh in maschine and start jupyter
