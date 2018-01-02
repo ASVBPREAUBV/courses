@@ -17,4 +17,6 @@ fi
 
 export instanceType="t2.xlarge"
 
+echo "instance type set"
+
 . $(dirname "$0")/setup_instance.sh

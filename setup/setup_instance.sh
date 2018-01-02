@@ -4,7 +4,7 @@
 # will export the right environment variables for this to succeed.
 
 # uncomment for debugging
-# set -x
+set -x
 
 if [ -z "$ami" ] || [ -z "$instanceType" ]; then
     echo "Missing \$ami or \$instanceType; this script should be called from"
@@ -27,6 +27,7 @@ if [ -z "$(aws configure get aws_access_key_id)" ]; then
     exit 1
 fi
 
+#TODO understand VPCs
 export vpcId=$(aws ec2 create-vpc --cidr-block 10.0.0.0/28 --query 'Vpc.VpcId' --output text)
 aws ec2 create-tags --resources $vpcId --tags --tags Key=Name,Value=$name
 aws ec2 modify-vpc-attribute --vpc-id $vpcId --enable-dns-support "{\"Value\":true}"

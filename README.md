@@ -12,7 +12,7 @@ These are the lecture materials from [Practical Deep Learning for Coders](http:/
     
 3. set the correct id and key
 4. select eu-west-1 or us-west-2 or us-east-1
-5. bash aws-alias.sh
+5. source aws-alias.sh
 6. bash setup_t2.sh 
-
-Until here it is working 
+7. wait until instance is running
+8. in /setup is a new file called fast-ai-commands.txt
